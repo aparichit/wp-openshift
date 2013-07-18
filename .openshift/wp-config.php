@@ -42,6 +42,53 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
+define('AUTH_KEY',         't,@jL,7&fC+q~v);H8y<jIz^v1S= :AwJSe5|%Ho}}]v|8o9i*i;~wrr552M ajx');
+define('SECURE_AUTH_KEY',  '=7`@+a0HY-DyC.jF`|N_C@cc|<6~+=Q):ITf^@r5ien68NH*2HwP[r@.?k2+8>7z');
+define('LOGGED_IN_KEY',    '&X|]5,+Rjba[T2/Kw(>]+tp[F>H %9I6J7d 9uelCiKzsA*^[I(ek+JF-|9:.g3c');
+define('NONCE_KEY',        'qC:GGZC-.:[n-1RTO8j{D`j0 ,af%sdze]7-E$Paz=6nUiBDL[|k8t~Br3H:T7e=');
+define('AUTH_SALT',        'bs2{:V=IPy^+P^uO|:`C+mjt<$/b21~HNA{q#K`C7=+UntK]cIExU&5T>)C$wHl:');
+define('SECURE_AUTH_SALT', 'a|a^QM*@NRp0(rOwv.4&fAYeGtRE8cHxY-9ds(Rx25Da&=H~!6xLL-(jMKM?M+^Z');
+define('LOGGED_IN_SALT',   '|j;fnYh-9U|#Hn/-6e:g4#vr,TrdhX`*i8>}m~ 4sCSQ|l}  >-EF/-EFjrkg)7U');
+define('NONCE_SALT',       'lC#d-Qw#DJxC^G-(:5qah}~N3r][[vkYN4i}fFE6,CzUURLl&xGc4oFd;Y*JyAY_');
+
+/**#@-*/
+
+/**
+ * WordPress Database Table prefix.
+ *
+ * You can have multiple installations in one database if you give each a unique
+ * prefix. Only numbers, letters, and underscores please!
+ */
+$table_prefix  = 'wp_';
+
+/**
+ * WordPress Localized Language, defaults to English.
+ *
+ * Change this to localize WordPress. A corresponding MO file for the chosen
+ * language must be installed to wp-content/languages. For example, install
+ * de_DE.mo to wp-content/languages and set WPLANG to 'de_DE' to enable German
+ * language support.
+ */
+define('WPLANG', '');
+
+/**
+ * For developers: WordPress debugging mode.
+ *
+ * Change this to true to enable the display of notices during development.
+ * It is strongly recommended that plugin and theme developers use WP_DEBUG
+ * in their development environments.
+ */
+define('WP_DEBUG', false);
+
+/* That's all, stop editing! Happy blogging. */
+
+/** Absolute path to the WordPress directory. */
+if ( !defined('ABSPATH') )
+  define('ABSPATH', dirname(__FILE__) . '/');
+
+/** Sets up WordPress vars and included files. */
+require_once(ABSPATH . 'wp-settings.php');
+
 
 // This is where we define the OpenShift specific secure variable functions
 require_once(ABSPATH . '../.openshift/openshift.inc');
